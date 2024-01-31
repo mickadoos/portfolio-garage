@@ -1,0 +1,160 @@
+/* @font-face {
+    font-family: 'Square721 BT Roman', sans-serif;
+    src: url('fonts/Square721\ BT\ Roman.otf') format('opentype');
+} */
+
+@font-face {
+  font-family: "Square721 BT Roman";
+  src: url("https://db.onlinewebfonts.com/t/7b6a3052ac99368df5c80f3fd161fe32.eot");
+  src: url("https://db.onlinewebfonts.com/t/7b6a3052ac99368df5c80f3fd161fe32.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/7b6a3052ac99368df5c80f3fd161fe32.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/7b6a3052ac99368df5c80f3fd161fe32.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/7b6a3052ac99368df5c80f3fd161fe32.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/7b6a3052ac99368df5c80f3fd161fe32.svg#Square721 BT Roman")
+      format("svg");
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* font-family: 'Agency FB', sans-serif; */
+  /* font-family: 'Moderna Condensed Unicase W00Lt', sans-serif; */
+  font-family: "Square721 BT Roman";
+}
+
+.garage-container {
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-between;
+  padding: 35px 50px;
+  background-color: #f0f0f0; /* Light grey for the main container */
+}
+
+.garage-header {
+  font-size: large;
+  width: 300px;
+  margin: 0;
+  padding: 5px 20px;
+  border: 1px solid blue;
+  background-color: #e0e0e0; /* Light blue for the header */
+}
+
+.sections {
+  border: 1px solid red;
+  background-color: #ffd9d9; /* Light pink for the sections container */
+}
+
+.titles {
+  font-size: medium;
+  margin: 35px 20px;
+}
+.titles > div {
+  border: 1px solid black;
+  margin: 10px 0px;
+  padding: 10px 5px;
+}
+
+.display {
+  width: 350px;
+  border: 1px solid green;
+  background-color: #e0ffe0; /* Light green for the display container */
+}
+
+.points {
+  font-size: small;
+  height: 50px;
+  border: 1px solid orange;
+  background-color: #fff0e0; /* Light orange for the points section */
+}
+
+.user-info {
+  margin-top: 20px;
+  height: 300px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  background-color: #e0e0ff; /* Light purple for the user-info container */
+}
+
+.user-info-mid {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.user-card {
+  width: 48%; /* Adjusted to leave some space between emblem-frame and about-short */
+  padding: 3px;
+  border: 1px solid purple; /* For visualization purposes, you can remove this */
+  background-color: #ffe0ff; /* Light pink for the emblem-frame */
+}
+
+.user-card img {
+  width: 100%;
+}
+
+.about-short {
+  font-size: small;
+  width: 48%; /* Adjusted to leave some space between emblem-frame and about-short */
+  border: 1px solid yellow; /* For visualization purposes, you can remove this */
+  background-color: #ffffe0; /* Light yellow for the about-short */
+}
+
+.user-info-bot {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+.user-info-bot div {
+    width: 50%;
+}
+
+.user-title {
+  font-size: small;
+  padding: 5px;
+}
+
+.user-subtitle {
+  font-size: x-small;
+  padding: 3px 5px;
+}
+
+.user-name {
+  padding: 3px 5px;
+}
+
+
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+  .garage-container {
+    flex-direction: column; /* Change to column layout on smaller screens */
+  }
+
+  .titles {
+    display: none; /* Hide titles by default on smaller screens */
+    position: absolute; /* Position absolute so it doesn't affect layout */
+    /*width: 100%;  Full width */
+    z-index: 1; /* Ensure it displays over other elements */
+    background-color: #ffe0ff;
+  }
+
+  .garage-header {
+    cursor: pointer; /* Add pointer cursor to indicate clickability */
+  }
+
+
+}
