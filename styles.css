@@ -39,15 +39,15 @@ body {
   display: flex;
   /* flex-direction: row; */
   justify-content: space-between;
-  padding: 35px 50px;
+  padding: 2em 3em;
   background-color: #f0f0f0; /* Light grey for the main container */
 }
 
 .garage-header {
-  font-size: large;
-  width: 300px;
+  font-size: 1.2em;
+  width: 18em;
   margin: 0;
-  padding: 5px 20px;
+  padding: 0.3em 1.25em;
   border: 1px solid blue;
   background-color: #e0e0e0; /* Light blue for the header */
 }
@@ -58,31 +58,57 @@ body {
 }
 
 .titles {
-  font-size: medium;
-  margin: 35px 20px;
+  font-size: 1em;
+  margin: 2em 1.25em;
 }
 .titles > div {
   border: 1px solid black;
-  margin: 10px 0px;
-  padding: 10px 5px;
+  margin: 0.5em 0;
+  padding: 0.5em 0.3em;
+  transition: background-color 0.3s; /* Add transition for a smooth effect */
 }
 
+.titles > div:hover {
+  background-color: #d9d9d9; /* Change to your desired hover background color */
+}
+
+#projects-container > div:hover {
+  background-color: #d9d9d9; /* Change to your desired hover background color for projects-container */
+}
+
+/* New styles for projects container */
+.projects-container {
+  display: none;
+  flex-direction: column;
+  font-size: 1em;
+  margin: 2em 1.25em;
+}
+
+.projects-container > div {
+  border: 1px solid black;
+  width: 20em;
+  margin: 0.5em 0;
+  padding: 0.5em 0.3em;
+}
+
+/* DISPLAY */
+
 .display {
-  width: 350px;
+  width: 22em;
   border: 1px solid green;
   background-color: #e0ffe0; /* Light green for the display container */
 }
 
 .points {
-  font-size: small;
-  height: 50px;
+  font-size: 0.75em;
+  height: 3em;
   border: 1px solid orange;
   background-color: #fff0e0; /* Light orange for the points section */
 }
 
 .user-info {
-  margin-top: 20px;
-  height: 300px;
+  margin-top: 1.25em;
+  height: 19em;
   border: 1px solid black;
   display: flex;
   flex-direction: column;
@@ -92,12 +118,12 @@ body {
 .user-info-mid {
   display: flex;
   justify-content: space-between;
-  margin-top: 10px;
+  margin-top: 0.5em;
 }
 
 .user-card {
   width: 48%; /* Adjusted to leave some space between emblem-frame and about-short */
-  padding: 3px;
+  padding: 0.2em;
   border: 1px solid purple; /* For visualization purposes, you can remove this */
   background-color: #ffe0ff; /* Light pink for the emblem-frame */
 }
@@ -107,36 +133,34 @@ body {
 }
 
 .about-short {
-  font-size: small;
+  font-size: 0, 75em;
   width: 48%; /* Adjusted to leave some space between emblem-frame and about-short */
   border: 1px solid yellow; /* For visualization purposes, you can remove this */
   background-color: #ffffe0; /* Light yellow for the about-short */
 }
 
 .user-info-bot {
-    display: flex;
-    justify-content: space-between;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+}
+
 .user-info-bot div {
-    width: 50%;
+  width: 50%;
 }
 
 .user-title {
-  font-size: small;
-  padding: 5px;
+  font-size: 0.75em;
+  padding: 0.3em;
 }
 
 .user-subtitle {
-  font-size: x-small;
-  padding: 3px 5px;
+  font-size: 0.65em;
+  padding: 0.2em 0.3em;
 }
 
 .user-name {
-  padding: 3px 5px;
+  padding: 0.2em 0.3em;
 }
-
-
 
 /* Media query for smaller screens */
 @media only screen and (max-width: 768px) {
@@ -147,6 +171,7 @@ body {
   .titles {
     display: none; /* Hide titles by default on smaller screens */
     position: absolute; /* Position absolute so it doesn't affect layout */
+    flex-direction: column;
     /*width: 100%;  Full width */
     z-index: 1; /* Ensure it displays over other elements */
     background-color: #ffe0ff;
@@ -155,6 +180,4 @@ body {
   .garage-header {
     cursor: pointer; /* Add pointer cursor to indicate clickability */
   }
-
-
 }
