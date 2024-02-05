@@ -1,8 +1,4 @@
-/* @font-face {
-    font-family: 'Square721 BT Roman', sans-serif;
-    src: url('fonts/Square721\ BT\ Roman.otf') format('opentype');
-} */
-
+/* Font Definitions */
 @font-face {
   font-family: "Square721 BT Roman";
   src: url("https://db.onlinewebfonts.com/t/7b6a3052ac99368df5c80f3fd161fe32.eot");
@@ -17,6 +13,8 @@
     url("https://db.onlinewebfonts.com/t/7b6a3052ac99368df5c80f3fd161fe32.svg#Square721 BT Roman")
       format("svg");
 }
+
+/* Box Model Reset */
 *,
 *::before,
 *::after {
@@ -29,20 +27,20 @@
   box-sizing: border-box;
 }
 
+/* Body Styles */
 body {
-  /* font-family: 'Agency FB', sans-serif; */
-  /* font-family: 'Moderna Condensed Unicase W00Lt', sans-serif; */
   font-family: "Square721 BT Roman";
 }
 
+/* Garage Container */
 .garage-container {
   display: flex;
-  /* flex-direction: row; */
   justify-content: space-between;
   padding: 2em 3em;
   background-color: #f0f0f0; /* Light grey for the main container */
 }
 
+/* Garage Header */
 .garage-header {
   font-size: 1.2em;
   width: 18em;
@@ -52,15 +50,19 @@ body {
   background-color: #e0e0e0; /* Light blue for the header */
 }
 
+/* Sections Container */
 .sections {
   border: 1px solid red;
   background-color: #ffd9d9; /* Light pink for the sections container */
 }
 
+/* Titles Container */
 .titles {
   font-size: 1em;
   margin: 2em 1.25em;
 }
+
+/* Individual Titles */
 .titles > div {
   border: 1px solid black;
   margin: 0.5em 0;
@@ -68,37 +70,43 @@ body {
   transition: background-color 0.3s; /* Add transition for a smooth effect */
 }
 
+/* Hover Effect for Titles */
 .titles > div:hover {
   background-color: #d9d9d9; /* Change to your desired hover background color */
 }
 
+/* Hover Effect for Projects Container */
 #projects-container > div:hover {
   background-color: #d9d9d9; /* Change to your desired hover background color for projects-container */
 }
 
-/* New styles for projects container */
+/* Projects Container */
 .projects-container {
   display: none;
   flex-direction: column;
   font-size: 1em;
   margin: 2em 1.25em;
+  width: 40%; /* Adjust the width as needed */
+  position: relative; /* Add relative positioning */
+  left: 1em; /* Adjust the left positioning as needed */
 }
 
+/* Individual Projects in Projects Container */
 .projects-container > div {
   border: 1px solid black;
-  width: 20em;
+  width: 16em;
   margin: 0.5em 0;
   padding: 0.5em 0.3em;
 }
 
-/* DISPLAY */
-
+/* Display Container */
 .display {
   width: 22em;
   border: 1px solid green;
   background-color: #e0ffe0; /* Light green for the display container */
 }
 
+/* Points Section */
 .points {
   font-size: 0.75em;
   height: 3em;
@@ -106,6 +114,7 @@ body {
   background-color: #fff0e0; /* Light orange for the points section */
 }
 
+/* User Info Container */
 .user-info {
   margin-top: 1.25em;
   height: 19em;
@@ -115,51 +124,114 @@ body {
   background-color: #e0e0ff; /* Light purple for the user-info container */
 }
 
+/* User Info Mid Section */
 .user-info-mid {
   display: flex;
   justify-content: space-between;
   margin-top: 0.5em;
 }
 
+/* User Card */
 .user-card {
-  width: 48%; /* Adjusted to leave some space between emblem-frame and about-short */
+  width: 48%;
   padding: 0.2em;
-  border: 1px solid purple; /* For visualization purposes, you can remove this */
+  border: 1px solid purple;
   background-color: #ffe0ff; /* Light pink for the emblem-frame */
 }
 
+/* User Card Image */
 .user-card img {
   width: 100%;
 }
 
+/* About Short Section */
 .about-short {
-  font-size: 0, 75em;
-  width: 48%; /* Adjusted to leave some space between emblem-frame and about-short */
-  border: 1px solid yellow; /* For visualization purposes, you can remove this */
+  font-size: 0.75em;
+  width: 48%;
+  border: 1px solid yellow;
   background-color: #ffffe0; /* Light yellow for the about-short */
 }
 
+/* User Info Bottom Section */
 .user-info-bot {
   display: flex;
   justify-content: space-between;
 }
 
+/* User Info Bottom Divs */
 .user-info-bot div {
   width: 50%;
 }
 
+/* User Title */
 .user-title {
   font-size: 0.75em;
   padding: 0.3em;
 }
 
+/* User Subtitle */
 .user-subtitle {
   font-size: 0.65em;
   padding: 0.2em 0.3em;
 }
 
+/* User Name */
 .user-name {
   padding: 0.2em 0.3em;
+}
+
+@media only screen and (min-width: 1440px) {
+  .garage-container {
+    display: flex;
+    /* justify-content: space-between; */
+    padding: 2em 2em;
+    background-color: #f0f0f0; /* Light grey for the main container */
+  }
+  /* Garage Header */
+  .garage-header {
+    font-size: 1.5em;
+    width: 25em;
+    margin: 0;
+    padding: 0.5em 1.25em;
+  }
+
+  /* Titles Container */
+  .titles {
+    font-size: 1.2em;
+    margin: 2em 1.25em;
+    width: 80%;
+  }
+
+  /* Individual Titles */
+  .titles > div {
+    margin: 1em 0.5em;
+    padding: 0.5em 0.3em;
+  }
+
+/* Projects Container */
+.projects-container {
+  display: none;
+  flex-direction: column;
+  font-size: 1.2em;
+  margin: 2em 1.25em;
+}
+
+/* Individual Projects in Projects Container */
+.projects-container > div {
+  border: 1px solid black;
+  width: 20em;
+  margin: 0.5em 0;
+  padding: 0.5em 0.3em;
+}
+
+/* Display Container */
+.display {
+  font-size: 1.2em;
+  width: 25em;
+  border: 1px solid green;
+  background-color: #e0ffe0; /* Light green for the display container */
+}
+
 }
 
 /* Media query for smaller screens */
